@@ -8,7 +8,19 @@ public class GitHub {
 	System.out.println(getMin(array));
 	System.out.println("MAX:");
 	System.out.println(getMax(array));
+	System.out.println("AVERAGE:");
+	System.out.println(getAverage(array));
+
 	}
+	
+	public static float getAverage(int []array) {
+		int count=getCount(array);
+		float total=0;
+		for (int i=0; i<array.length;i++) {
+				total=array[i]+total;
+			}
+		return total/count;
+		}
 	public static int getMax(int [] array) {
 		if (array.length==0) {
 			return 0;
