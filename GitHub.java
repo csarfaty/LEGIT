@@ -4,6 +4,8 @@ public class GitHub {
 	int array[]= {1,4,5,3,7,8};
 	System.out.println("COUNT:");
 	System.out.println(getCount(array));
+	System.out.println("MIN:");
+	System.out.println(getMin(array));
 	}
 
 public static int getCount(int [] array) {
@@ -13,5 +15,17 @@ public static int getCount(int [] array) {
 	}
 	return count;
 }
+public static int getMin(int [] array) {
+	if (array.length==0) {
+		return 0;
+	}
+	int min=array[0];
+	for (int i=1; i<array.length;i++) {
+		if (array[i]<min) {
+			min=array[i];
+			}
+		}
+		return min;
+	}
 
 }
